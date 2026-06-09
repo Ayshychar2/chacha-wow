@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CHACHA WOW - Experience elevated Indian street food and hand-crafted gourmet momos in Model Town, Ludhiana. Order online via WhatsApp, Swiggy, Zomato, or Magicpin.">
+    <title>CHACHA WOW | Elevated Indian Fast Food &amp; Crafted Momos</title>
+    
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts: Cormorant Garamond (Serif Headings) & Inter (Modern Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet.js for Interactive Luxury Dark Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Custom Cursor (Premium Accent) -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="gold-text font-serif">CHACHA</span> <span class="logo-light">WOW</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#reviews" class="nav-item">Reviews</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            
+            <div class="header-cta">
+                <a href="#order" class="btn btn-gold btn-sm">Order Online</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-item">Home</a>
+            <a href="#about" class="mobile-nav-item">About</a>
+            <a href="#reviews" class="mobile-nav-item">Reviews</a>
+            <a href="#contact" class="mobile-nav-item">Contact</a>
+            <a href="#order" class="mobile-nav-item btn btn-gold btn-full">Order Online</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-wrapper">
+            <img src="assets/hero_interior.png" alt="Chacha Wow Modern Casual Dining" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-content-container">
+            <div class="hero-text-align fade-in-up scroll-trigger">
+                <span class="hero-subtitle gold-text">ELEVATED INDIAN FAST FOOD &amp; MOMOS</span>
+                <h1 class="hero-title font-serif">Where Exceptional Food<br>Meets Memorable Experiences</h1>
+                <p class="hero-description">
+                    Indulge in a premium casual dining experience where Ludhiana's street food heritage is reimagined with fresh, high-quality ingredients and modern presentation.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#order" class="btn btn-gold">Order Online Now</a>
+                    <a href="#about" class="btn btn-outline">Explore Menu</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <svg class="scroll-arrow" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                <path d="M6 9l6 6 6-6" />
+            </svg>
+            <span class="scroll-text">Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text-content scroll-trigger fade-in-left">
+                    <span class="section-subtitle gold-text">OUR STORY</span>
+                    <h2 class="section-title font-serif">Reinventing Ludhiana's Street Classics</h2>
+                    <p class="about-paragraph highlight-text">
+                        What started as a beloved local fast-food hub in Ludhiana has been thoroughly elevated. Today, Chacha Wow stands as a sanctuary of gourmet fast food and crafted momos.
+                    </p>
+                    <p class="about-paragraph">
+                        We believe that quick comfort food deserves the same precision as fine dining. We blend the vibrant soul of traditional Indian street spices with premium ingredients. From our crispy cornflake-encrusted momos to our signature noodle-loaded burgers, every dish is prepared fresh to order.
+                    </p>
+                    
+                    <div class="chef-quote-block">
+                        <p class="chef-quote">
+                            "Fast food does not mean compromised quality. We elevate street favorites using fresh, premium ingredients and precise techniques, turning everyday quick bites into sensory celebrations."
+                        </p>
+                        <div class="chef-info">
+                            <span class="chef-name gold-text">Chef Devendra Singh</span>
+                            <span class="chef-title">Executive Culinary Director</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visuals scroll-trigger fade-in-right">
+                    <div class="about-image-wrapper main-img-wrap">
+                        <img src="assets/chef_philosophy.png" alt="Executive Chef preparing fresh food delicacies" class="about-img main-img">
+                    </div>
+                    <div class="about-image-wrapper accent-img-wrap">
+                        <img src="assets/dish_momo_kurkure.png" alt="Gourmet Kurkure Momos" class="about-img accent-img">
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="badge-num gold-text">10+</span>
+                        <span class="badge-text">Years of Street Heritage Elevated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Dishes Section -->
+    <section id="signature" class="signature-section section-padding bg-charcoal-light">
+        <div class="container">
+            <div class="section-header text-center scroll-trigger fade-in-up">
+                <span class="section-subtitle gold-text">CRAFTED MASTERPIECES</span>
+                <h2 class="section-title font-serif">Our Signature Creations</h2>
+                <div class="gold-divider"></div>
+            </div>
+            
+            <div class="signature-grid">
+                <!-- Card 1 -->
+                <div class="signature-card scroll-trigger fade-in-up delay-100">
+                    <div class="card-image-wrapper">
+                        <img src="assets/dish_momo_kurkure.png" alt="Gourmet Kurkure Momos" class="card-img">
+                        <div class="card-overlay">
+                            <a href="#menu" class="card-link-btn font-serif">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-tag gold-text">MOMOS</span>
+                        <h3 class="card-title font-serif">Gourmet Kurkure Momos</h3>
+                        <p class="card-desc">
+                            Crispy golden-fried paneer dumplings encrusted in artisanal cornflakes, served with a smoky chipotle-infused tandoori dip and micro-coriander.
+                        </p>
+                        <div class="card-footer-price">
+                            <span class="price-symbol gold-text">₹</span><span class="price-val">220</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="signature-card scroll-trigger fade-in-up delay-200">
+                    <div class="card-image-wrapper">
+                        <img src="assets/dish_burger_noodle.png" alt="Signature Noodle Burger" class="card-img">
+                        <div class="card-overlay">
+                            <a href="#menu" class="card-link-btn font-serif">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-tag gold-text">BURGERS</span>
+                        <h3 class="card-title font-serif">Signature Noodle Burger</h3>
+                        <p class="card-desc">
+                            A butter-toasted brioche bun layering a spiced potato-herb patty, crispy garlic stir-fried noodles, and a rich house cream cheese dressing.
+                        </p>
+                        <div class="card-footer-price">
+                            <span class="price-symbol gold-text">₹</span><span class="price-val">160</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="signature-card scroll-trigger fade-in-up delay-300">
+                    <div class="card-image-wrapper">
+                        <img src="assets/dish_pizza_paneer.png" alt="Tandoori Paneer Pizza" class="card-img">
+                        <div class="card-overlay">
+                            <a href="#menu" class="card-link-btn font-serif">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-tag gold-text">PIZZAS</span>
+                        <h3 class="card-title font-serif">Tandoori Paneer Pizza</h3>
+                        <p class="card-desc">
+                            Stone-baked thin crust topped with coal-fired marinated paneer cubes, capsicum ribbons, bubbling mozzarella, and signature makhani sauce base.
+                        </p>
+                        <div class="card-footer-price">
+                            <span class="price-symbol gold-text">₹</span><span class="price-val">380</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Parallax Background) -->
+    <section id="experience" class="experience-section section-padding parallax-section">
+        <div class="parallax-bg-wrapper">
+            <img src="assets/experience_dining.png" alt="Chacha Wow Cozy Casual Ambiance" class="parallax-bg-img">
+            <div class="parallax-overlay"></div>
+        </div>
+        
+        <div class="container experience-content-container">
+            <div class="experience-grid">
+                <div class="experience-info-box scroll-trigger fade-in-left">
+                    <span class="section-subtitle gold-text">OUR DINING AMBIANCE</span>
+                    <h2 class="section-title font-serif">A Space for Everyone</h2>
+                    <p class="experience-desc">
+                        Chacha Wow combines the quick, casual nature of street food hubs with a warm, beautifully-lit modern dining space. Sit back with family or order express delivery to enjoy at home.
+                    </p>
+                    
+                    <div class="experience-tabs">
+                        <button class="experience-tab-btn active" data-exp="momo-theatre">Momo &amp; Chaat Theatre</button>
+                        <button class="experience-tab-btn" data-exp="family-dining">Indoor Family Space</button>
+                        <button class="experience-tab-btn" data-exp="takeaway">Express Takeaway</button>
+                    </div>
+
+                    <div class="experience-tab-contents">
+                        <!-- Tab Content 1 -->
+                        <div class="experience-tab-pane active" id="exp-momo-theatre">
+                            <h4 class="tab-pane-title font-serif gold-text">Momo &amp; Chaat Live Theatre</h4>
+                            <p>Witness our culinary artisans hand-crafting fresh dumplings and assembling crispy pani puris live at our open interactive display counters. Absolute freshness, guaranteed.</p>
+                        </div>
+                        <!-- Tab Content 2 -->
+                        <div class="experience-tab-pane" id="exp-family-dining">
+                            <h4 class="tab-pane-title font-serif gold-text">Indoor Family Dining Space</h4>
+                            <p>A welcoming, contemporary indoor dining hall styled with modern warm lighting, deep charcoal accents, and comfortable seating designed to bring friends and families together.</p>
+                        </div>
+                        <!-- Tab Content 3 -->
+                        <div class="experience-tab-pane" id="exp-takeaway">
+                            <h4 class="tab-pane-title font-serif gold-text">Express Premium Takeaway</h4>
+                            <p>Prefer to eat at home? Our premium thermal packaging prevents condensation, ensuring that our crispy Kurkure momos and stone-baked pizzas arrive at your doorstep steaming hot and crunchy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="menu-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-trigger fade-in-up">
+                <span class="section-subtitle gold-text">OUR MENU PREVIEW</span>
+                <h2 class="section-title font-serif">Explore the Flavors</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <!-- Menu Navigation Tabs -->
+            <div class="menu-nav-tabs scroll-trigger fade-in-up">
+                <button class="menu-nav-btn active" data-menu-category="momos">Crafted Momos</button>
+                <button class="menu-nav-btn" data-menu-category="burgers">Burgers &amp; Sandwiches</button>
+                <button class="menu-nav-btn" data-menu-category="pizzas">Stone-Baked Pizzas</button>
+                <button class="menu-nav-btn" data-menu-category="shakes">Shakes &amp; Mocktails</button>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div class="menu-items-container scroll-trigger fade-in-up">
+                
+                <!-- MOMOS CATEGORY -->
+                <div class="menu-category-pane active" id="menu-momos">
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Kurkure Paneer Momos <span class="badge badge-gold">Signature</span></h4>
+                            <p class="menu-item-desc">Crispy cornflake encrusted momos, seasoned cottage cheese stuffing, house tandoori cream dip.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹220</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Steamed Soya Momos <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Delicately steamed dumplings filled with spiced minced soya, herbs, and spring onions.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹140</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Peri Peri Fried Paneer Momos <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Crisp-fried paneer momos tossed in a fiery, hot house peri-peri spice dust blend.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹180</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Afghani Malai Paneer Momos</h4>
+                            <p class="menu-item-desc">Dumplings marinated in a rich cashew-cream and cheese marinade, charcoal-grilled, topped with fresh herbs.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹240</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BURGERS CATEGORY -->
+                <div class="menu-category-pane" id="menu-burgers">
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Signature Noodle Burger <span class="badge badge-gold">Signature</span></h4>
+                            <p class="menu-item-desc">Toasted brioche bun layering a spiced potato-herb patty, crispy stir-fried garlic noodles, and sweet house cream cheese dressing.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹160</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Tandoori Paneer Tikka Burger <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Tandoor-charred cottage cheese steak, mint mayonnaise, fresh onion rings, crisp lettuce leaves, toasted bun.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹180</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Classic Corn &amp; Cheese Melt <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Sweet corn kernels, gooey melted mozzarella, roasted garlic butter, toasted artisan sandwich bread.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹190</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIZZAS CATEGORY -->
+                <div class="menu-category-pane" id="menu-pizzas">
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Paneer Makhani Pizza <span class="badge badge-gold">Signature</span></h4>
+                            <p class="menu-item-desc">Spiced tandoori paneer tikka, red onions, capsicum, rich makhani gravy sauce, melted mozzarella.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹380</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Garden Fresh Supreme <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Bell peppers, sweet corn, button mushrooms, black olives, slow-cooked herb tomato sauce base.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹320</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Three Cheese Margherita <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Rich mozzarella, white cheddar, and processed cheese blend layered over slow-cooked herb tomato sauce.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹290</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEVERAGES CATEGORY -->
+                <div class="menu-category-pane" id="menu-shakes">
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Double Chocolate KitKat Shake <span class="badge badge-gold">Signature</span></h4>
+                            <p class="menu-item-desc">Thick vanilla milkshake blended with premium cocoa, crushed KitKat bars, vanilla ice cream, and chocolate fudge.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹220</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Oreo Mint Shake <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Classic Oreo cream cookies blended with fresh mint extract, whole milk, and chocolate swirls.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹200</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Roasted Hazelnut Cold Coffee <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Double-shot espresso blended with roasted hazelnut syrup, chilled milk, and a vanilla scoop.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹180</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-row">
+                        <div class="menu-item-left">
+                            <h4 class="menu-item-name font-serif">Mango &amp; Passion Fruit Elixir <span class="badge badge-veg">Veg</span></h4>
+                            <p class="menu-item-desc">Refreshing summer mocktail with mango pulp, passion fruit nectar, sparkling soda, and fresh mint leaves.</p>
+                        </div>
+                        <div class="menu-item-right">
+                            <span class="menu-item-price gold-text">₹190</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="menu-disclaimer text-center">
+                <p>* Prices are subject to government taxes and 10% optional service charge. Please notify your server regarding any dietary requirements or food allergies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Masonry Grid) -->
+    <section id="gallery" class="gallery-section section-padding bg-charcoal-light">
+        <div class="container">
+            <div class="section-header text-center scroll-trigger fade-in-up">
+                <span class="section-subtitle gold-text">VISUAL STORYTELLING</span>
+                <h2 class="section-title font-serif">Moments of Artistry</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <!-- Masonry Grid Layout -->
+            <div class="gallery-masonry scroll-trigger fade-in-up">
+                <!-- Large Vertical -->
+                <div class="gallery-item item-vertical">
+                    <img src="assets/chef_philosophy.png" alt="Chef plating details" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">CRAFT</span>
+                        <h4 class="gallery-item-title font-serif">Precision in Cooking</h4>
+                    </div>
+                </div>
+                
+                <!-- Standard Square -->
+                <div class="gallery-item item-square">
+                    <img src="assets/dish_momo_kurkure.png" alt="Gourmet Kurkure momos close-up" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">MOMOS</span>
+                        <h4 class="gallery-item-title font-serif">Kurkure Golden Crisps</h4>
+                    </div>
+                </div>
+
+                <!-- Wide Horizontal -->
+                <div class="gallery-item item-wide">
+                    <img src="assets/hero_interior.png" alt="Interior main hall visual" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">AMBIANCE</span>
+                        <h4 class="gallery-item-title font-serif">Modern Casual Sanctuary</h4>
+                    </div>
+                </div>
+
+                <!-- Standard Square -->
+                <div class="gallery-item item-square">
+                    <img src="assets/dish_burger_noodle.png" alt="Signature Noodle Burger close-up" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">BURGERS</span>
+                        <h4 class="gallery-item-title font-serif">Signature Noodle Burger</h4>
+                    </div>
+                </div>
+
+                <!-- Large Vertical -->
+                <div class="gallery-item item-vertical">
+                    <img src="assets/experience_dining.png" alt="Indoor dining environment" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">AMBIANCE</span>
+                        <h4 class="gallery-item-title font-serif">Warm Evenings</h4>
+                    </div>
+                </div>
+
+                <!-- Standard Square -->
+                <div class="gallery-item item-square">
+                    <img src="assets/dish_pizza_paneer.png" alt="Spiced paneer pizza close-up" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <span class="gallery-tag gold-text">PIZZAS</span>
+                        <h4 class="gallery-item-title font-serif">Stone-Baked Paneer Pizza</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Elegant Testimonial Slider) -->
+    <section id="reviews" class="reviews-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-trigger fade-in-up">
+                <span class="section-subtitle gold-text">PATRON OPINIONS</span>
+                <h2 class="section-title font-serif">Words from Our Patrons</h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <!-- Google Ratings Highlight Box -->
+            <div class="google-ratings-summary scroll-trigger fade-in-up">
+                <div class="google-logo-box">
+                    <svg class="google-svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="#EA4335" d="M12 5.04c1.64 0 3.12.56 4.28 1.67l3.2-3.2C17.52 1.64 14.96 1 12 1 7.36 1 3.4 3.68 1.48 7.56l3.8 2.96C6.16 7.4 8.84 5.04 12 5.04z"/>
+                        <path fill="#4285F4" d="M23.52 12.28c0-.8-.08-1.56-.2-2.28H12v4.52h6.48c-.28 1.48-1.12 2.72-2.36 3.56l3.68 2.84c2.16-2 3.72-4.96 3.72-8.64z"/>
+                        <path fill="#FBBC05" d="M5.28 10.52c-.24-.72-.36-1.48-.36-2.28s.12-1.56.36-2.28L1.48 3C.56 4.84 0 6.88 0 9s.56 4.16 1.48 6l3.8-2.96c-.24-.72-.36-1.48-.36-2.28z"/>
+                        <path fill="#34A853" d="M12 23c3.24 0 6-.1 8-2.96l-3.68-2.84c-1.16.8-2.68 1.28-4.32 1.28-3.16 0-5.84-2.36-6.8-5.48l-3.8 2.96C3.4 20.32 7.36 23 12 23z"/>
+                    </svg>
+                    <span class="google-review-text">Google Review Highlight</span>
+                </div>
+                <div class="stars-aggregate">
+                    <span class="rating-number">4.8</span>
+                    <span class="rating-stars gold-text">★★★★★</span>
+                    <span class="review-count">(1,248 Verified Local Reviews)</span>
+                </div>
+            </div>
+
+            <!-- Custom Built Testimonial Slider Wrapper -->
+            <div class="testimonial-slider-container scroll-trigger fade-in-up">
+                <div class="testimonial-track">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-quote-icon font-serif">“</div>
+                        <p class="testimonial-text">
+                            An absolute masterpiece of fast food in Ludhiana. The Kurkure Paneer Momos were extremely crispy, and the sheer taste of the Noodle Burger is unmatched. Polite staff and a very nice, clean dining ambiance in Model Town.
+                        </p>
+                        <div class="testimonial-author-box">
+                            <h4 class="author-name font-serif gold-text">Aarav Sharma</h4>
+                            <p class="author-details">Ludhiana Food Critic</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-quote-icon font-serif">“</div>
+                        <p class="testimonial-text">
+                            Chacha Wow has elevated street food and momos to a premium standard. The dining space is very warm, and their paneer makhani pizza is delicious. The packaging is premium too, so everything stays hot when delivered.
+                        </p>
+                        <div class="testimonial-author-box">
+                            <h4 class="author-name font-serif gold-text">Priyanjali Kapoor</h4>
+                            <p class="author-details">Patron &amp; Food Blogger</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-quote-icon font-serif">“</div>
+                        <p class="testimonial-text">
+                            Beautiful layout, elegant presentation, and quick service. The Afghani Malai momos were creamy perfection, and the KitKat shake is a must-try for kids. Highly recommended for family fast-food cravings in Ludhiana.
+                        </p>
+                        <div class="testimonial-author-box">
+                            <h4 class="author-name font-serif gold-text">Chef Vikram Malhotra</h4>
+                            <p class="author-details">Restaurateur &amp; Food Consultant</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <button class="slider-control prev-btn" aria-label="Previous Review">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                        <path d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="slider-control next-btn" aria-label="Next Review">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                        <path d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Dot Indicators -->
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Online Section (WhatsApp and Delivery Highlights) -->
+    <section id="order" class="order-section section-padding bg-charcoal-light">
+        <div class="container">
+            <div class="section-header text-center scroll-trigger fade-in-up">
+                <span class="section-subtitle gold-text">ORDER ONLINE</span>
+                <h2 class="section-title font-serif">Fresh Flavors Delivered</h2>
+                <p class="order-section-subtitle">
+                    Skip the wait. Chat directly with us on WhatsApp for custom orders and instant responses, or order via our listing on major delivery networks.
+                </p>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="order-channels-grid">
+                <!-- Direct WhatsApp Ordering (Primary CTA) -->
+                <div class="order-card whatsapp-card scroll-trigger fade-in-left">
+                    <div class="order-card-header">
+                        <div class="whatsapp-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.761.459 3.477 1.332 5l-1.356 4.962 5.082-1.332c1.47.802 3.125 1.226 4.92 1.226 5.506 0 10-4.482 10-9.988 0-5.506-4.494-9.988-10-9.988zm5.556 14.13c-.228.648-1.332 1.206-1.83 1.266-.468.06-1.074.084-2.67-.546-2.046-.804-3.342-2.88-3.444-3.018-.102-.138-.828-1.104-.828-2.106 0-1.002.522-1.494.708-1.698.186-.204.408-.258.546-.258.138 0 .276.006.396.012.126.006.294-.048.462.36.174.426.594 1.458.648 1.566.054.108.09.234.018.378-.072.144-.108.234-.216.36-.108.126-.228.282-.324.378-.108.102-.222.216-.096.432.126.216.564.93 1.206 1.506.828.738 1.524.966 1.74 1.074.216.108.342.09.468-.054.126-.144.546-.636.696-.852.15-.216.3-.18.51-.102.21.078 1.32.624 1.548.738.228.114.378.174.432.27.054.096.054.552-.174 1.2z"/>
+                            </svg>
+                            <span>WhatsApp Direct</span>
+                        </div>
+                    </div>
+                    <div class="order-card-body">
+                        <h3 class="order-title font-serif">Order via WhatsApp</h3>
+                        <p class="order-description">
+                            Send us your food selection directly. Get customized spice levels, real-time preparation updates, and express curbside pickup coordinate tags.
+                        </p>
+                        <span class="whatsapp-number gold-text">+91 98765 43210</span>
+                    </div>
+                    <div class="order-card-footer">
+                        <a href="https://wa.me/919876543210?text=Hello%20Chacha%20Wow,%20I'd%20like%20to%20place%20an%20order%20from%20your%20luxury%20menu!" target="_blank" class="btn btn-gold btn-full">Chat &amp; Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Delivery Partners Panel -->
+                <div class="order-card partners-card scroll-trigger fade-in-right">
+                    <div class="order-card-header">
+                        <span class="partners-label gold-text">DELIVERY PLATFORMS</span>
+                    </div>
+                    <div class="order-card-body">
+                        <h3 class="order-title font-serif">Our Ordering Partners</h3>
+                        <p class="order-description">
+                            We are active on Ludhiana's major delivery platforms. Click below to order through Swiggy, Zomato, or Magicpin and claim platform reward tokens.
+                        </p>
+                        
+                        <!-- Partner Links Grid -->
+                        <div class="partners-buttons-grid">
+                            <!-- Zomato -->
+                            <a href="https://www.zomato.com/ludhiana/chacha-wow-fast-food-model-town" target="_blank" class="partner-btn partner-zomato">
+                                <span class="partner-logo-txt">Zomato</span>
+                                <span class="partner-action">Order Now →</span>
+                            </a>
+                            <!-- Swiggy -->
+                            <a href="https://www.swiggy.com/restaurants/chacha-wow-model-town-ludhiana" target="_blank" class="partner-btn partner-swiggy">
+                                <span class="partner-logo-txt">Swiggy</span>
+                                <span class="partner-action">Order Now →</span>
+                            </a>
+                            <!-- Magicpin -->
+                            <a href="https://magicpin.in/Ludhiana/Model-Town/Restaurant/Chacha-Wow-Fast-Food/store/803f27/" target="_blank" class="partner-btn partner-magicpin">
+                                <span class="partner-logo-txt">Magicpin</span>
+                                <span class="partner-action">Order Now →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Contact Info Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Info Panel -->
+                <div class="contact-info-panel scroll-trigger fade-in-left">
+                    <span class="section-subtitle gold-text">LOCATION &amp; CONTACT</span>
+                    <h2 class="section-title font-serif">Get in Touch</h2>
+                    <div class="gold-divider"></div>
+                    
+                    <div class="contact-details-list">
+                        
+                        <!-- Address -->
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-content">
+                                <h4 class="detail-label font-serif gold-text">Our Address</h4>
+                                <p class="detail-text">
+                                    Shop No 746, Dr Ambedkar Nagar St,<br>
+                                    Sant Fateh Singh Nagar, Model Town,<br>
+                                    Ludhiana, Punjab 141002
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-content">
+                                <h4 class="detail-label font-serif gold-text">Dining Hours</h4>
+                                <p class="detail-text">
+                                    Lunch: 12:00 PM – 3:30 PM<br>
+                                    Dinner: 7:00 PM – 11:30 PM<br>
+                                    <span class="open-days-highlight">Open Daily for Dine-in &amp; Delivery</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Contacts -->
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div class="contact-detail-content">
+                                <h4 class="detail-label font-serif gold-text">Concierge &amp; Enquiries</h4>
+                                <p class="detail-text">
+                                    Phone: <a href="tel:+919876543210" class="link-hover-gold">+91 98765 43210</a><br>
+                                    Email: <a href="mailto:reservations@chachawow.com" class="link-hover-gold">reservations@chachawow.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Dark Map Wrapper -->
+                <div class="contact-map-panel scroll-trigger fade-in-right">
+                    <div id="leaflet-map" class="luxury-dark-map"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Luxury Footer -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand-box">
+                    <h3 class="footer-logo font-serif"><span class="gold-text">CHACHA</span> WOW</h3>
+                    <p class="footer-brand-desc">Reimagining street food and momos through gourmet quality and modern presentation.</p>
+                </div>
+                
+                <div class="footer-links-box">
+                    <h5 class="footer-col-title font-serif gold-text">Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#reviews">Patron Reviews</a></li>
+                        <li><a href="#contact">Contact &amp; Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-box">
+                    <h5 class="footer-col-title font-serif gold-text">Order Channels</h5>
+                    <ul class="footer-links">
+                        <li><a href="#order">WhatsApp Direct</a></li>
+                        <li><a href="#order">Zomato Orders</a></li>
+                        <li><a href="#order">Swiggy Orders</a></li>
+                        <li><a href="#order">Magicpin Orders</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-box">
+                    <h5 class="footer-col-title font-serif gold-text">Follow Our Journey</h5>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Follow us on Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Follow us on Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://tripadvisor.com" target="_blank" class="social-link" aria-label="Review us on TripAdvisor">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="9" cy="12" r="2"/>
+                                <circle cx="15" cy="12" r="2"/>
+                                <path d="M12 17a4.5 4.5 0 0 0 4-2.5H8A4.5 4.5 0 0 0 12 17z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 CHACHA WOW. All Rights Reserved. Designed for Luxury Hospitality.</p>
+                <div class="footer-legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet.js Interactive Map Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Script Logic -->
+    <script src="main.js"></script>
+</body>
+</html>
