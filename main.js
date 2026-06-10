@@ -104,44 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     triggerElements.forEach(el => scrollObserver.observe(el));
 
-    // Parallax scrolling effect on background image
-    const parallaxImg = document.querySelector('.parallax-bg-img');
-    const parallaxSection = document.querySelector('.parallax-section');
-    
-    if (parallaxImg && parallaxSection) {
-        window.addEventListener('scroll', () => {
-            const sectionRect = parallaxSection.getBoundingClientRect();
-            const scrollPercent = (window.innerHeight - sectionRect.top) / (window.innerHeight + sectionRect.height);
-            
-            if (sectionRect.top < window.innerHeight && sectionRect.bottom > 0) {
-                // Shift image within -15% to 15% translate range
-                const translateY = (scrollPercent * 30) - 15;
-                parallaxImg.style.transform = `translateY(${translateY}%) scale(1.1)`;
-            }
-        });
-    }
 
-    /* 5. EXPERIENCE SECTIONS TABS */
-    const expTabButtons = document.querySelectorAll('.experience-tab-btn');
-    const expPanes = document.querySelectorAll('.experience-tab-pane');
-
-    expTabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const expType = btn.getAttribute('data-exp');
-            
-            // Switch active buttons
-            expTabButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Switch active contents
-            expPanes.forEach(pane => {
-                pane.classList.remove('active');
-                if (pane.id === `exp-${expType}`) {
-                    pane.classList.add('active');
-                }
-            });
-        });
-    });
 
     /* 6. MENU PREVIEW CATEGORY TABS */
     const menuTabButtons = document.querySelectorAll('.menu-nav-btn');
