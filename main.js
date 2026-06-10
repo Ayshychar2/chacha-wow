@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUXURY DINING INTERACTIVE SCRIPT - CHACHA WOW
+   HIGH-ENERGY CASUAL DINING SCRIPT - CHACHA WOW (BBQ NATION INSPIRED)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,15 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
         hoverElements.forEach(elem => {
             elem.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(2)';
-                cursor.style.backgroundColor = '#f5f2eb';
+                cursor.style.backgroundColor = '#1a1a1a';
                 follower.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                follower.style.borderColor = '#d4af37';
+                follower.style.borderColor = '#ff6200';
             });
             elem.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.backgroundColor = '#d4af37';
+                cursor.style.backgroundColor = '#ff6200';
                 follower.style.transform = 'translate(-50%, -50%) scale(1)';
-                follower.style.borderColor = '#c5a880';
+                follower.style.borderColor = '#ff6200';
             });
         });
     }
@@ -247,9 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startAutoplay();
 
-
-
-    /* 9. LEAFLET MAP CUSTOM DARK INTEGRATION */
+    /* 8. LEAFLET MAP CUSTOM DARK INTEGRATION */
     const mapElement = document.getElementById('leaflet-map');
     if (mapElement) {
         // Coordinate location centered at Shop No 746, Model Town, Ludhiana, Punjab
@@ -270,12 +268,12 @@ document.addEventListener('DOMContentLoaded', () => {
             maxZoom: 20
         }).addTo(map);
 
-        // Define premium custom Gold SVG Pin Marker
-        const goldIcon = L.divIcon({
+        // Define premium custom Orange SVG Pin Marker (BBQ Nation Theme)
+        const orangeIcon = L.divIcon({
             html: `
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#d4af37" stroke="#070707" stroke-width="1.5"/>
-                    <circle cx="12" cy="9" r="2.2" fill="#f5f2eb"/>
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="#ff6200" stroke="#0f0f0f" stroke-width="1.5"/>
+                    <circle cx="12" cy="9" r="2.2" fill="#ffffff"/>
                 </svg>
             `,
             className: 'custom-map-marker',
@@ -284,14 +282,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Place custom gold marker on coordinates
-        const marker = L.marker([lat, lng], { icon: goldIcon }).addTo(map);
+        const marker = L.marker([lat, lng], { icon: orangeIcon }).addTo(map);
 
-        // Custom stylized Leaflet popup bubble
+        // Custom stylized Leaflet popup bubble (Styled in clean white/orange)
         marker.bindPopup(`
-            <div style="background-color:#121212; color:#f5f2eb; padding:1.2rem; font-family:'Inter', sans-serif; border: 1px solid #c5a880;">
-                <h4 style="font-family:'Cormorant Garamond', serif; font-size:1.8rem; margin-bottom:0.5rem; color:#d4af37; font-weight:600;">CHACHA WOW</h4>
-                <p style="font-size:1.2rem; margin:0; line-height:1.4; color:#a8a39a;">Shop 746, Model Town<br>Ludhiana, Punjab</p>
-                <a href="https://maps.google.com/?q=Chacha+Wow+Fast+Food+Model+Town+Ludhiana" target="_blank" style="display:inline-block; font-size:1.1rem; color:#d4af37; margin-top:0.8rem; text-decoration:underline;">Get Directions</a>
+            <div style="background-color:#ffffff; color:#1a1a1a; padding:1.2rem; font-family:'Inter', sans-serif; border: 1.5px solid #ff6200; border-radius:8px; box-shadow:0 10px 20px rgba(0,0,0,0.05);">
+                <h4 style="font-family:'Poppins', sans-serif; font-size:1.8rem; margin-bottom:0.5rem; color:#ff6200; font-weight:700;">CHACHA WOW</h4>
+                <p style="font-size:1.2rem; margin:0; line-height:1.4; color:#666666; font-weight:400;">Shop 746, Model Town<br>Ludhiana, Punjab</p>
+                <a href="https://maps.google.com/?q=Chacha+Wow+Fast+Food+Model+Town+Ludhiana" target="_blank" style="display:inline-block; font-size:1.1rem; color:#ff6200; margin-top:0.8rem; font-weight:600; text-decoration:underline;">Get Directions</a>
             </div>
         `);
     }
