@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayush Chaurasia - About Me</title>
+    <meta name="description" content="E-commerce trajectory, skills arsenal, and web design philosophy of Ayush Chaurasia.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "electric-neon": "#00FF41",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary": "#b0c6ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#5f6161",
+                        "on-surface-variant": "#b9ccb2",
+                        "primary-fixed-dim": "#00e639",
+                        "secondary-container": "#568dff",
+                        "on-error-container": "#ffdad6",
+                        "muted-silver": "#888888",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#84967e",
+                        "inverse-primary": "#006e16",
+                        "on-primary-fixed": "#002203",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#72ff70",
+                        "on-secondary-fixed": "#001945",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary": "#002d6f",
+                        "surface-container-highest": "#353534",
+                        "deep-obsidian": "#050505",
+                        "primary-container": "#00ff41",
+                        "graphite-surface": "#141414",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#dcdddd",
+                        "on-primary-container": "#007117",
+                        "on-secondary-container": "#002661",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "plasma-blue": "#0070FF",
+                        "surface-tint": "#00e639",
+                        "on-primary": "#003907",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed-variant": "#00530e",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#f9f9f9",
+                        "primary": "#ebffe2",
+                        "outline-variant": "#3b4b37",
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-xl": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+        }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(136, 136, 136, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-surface antialiased min-h-screen flex flex-col selection:bg-electric-neon selection:text-deep-obsidian">
+
+    <!-- TopNavBar -->
+    <nav class="bg-deep-obsidian/80 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-muted-silver/20 flat no shadows">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter hover:text-electric-neon transition-all duration-300" href="index.html">
+                Ayush.
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon" href="index.html">Home</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon" href="works.html">Works</a>
+                <a class="font-label-mono text-label-mono text-electric-neon border-b-2 border-electric-neon pb-1 opacity-80 scale-95 transition-transform" href="about.html">About</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon" href="index.html#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wide hover:opacity-80 scale-95 transition-transform flex items-center gap-2" href="https://wa.me/918587874104" target="_blank">
+                    WhatsApp <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                </a>
+                <button id="hamburger-btn" class="md:hidden text-on-surface flex items-center justify-center" aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (overlay) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-deep-obsidian/95 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 md:hidden">
+        <button id="close-drawer" class="absolute top-6 right-margin-mobile text-on-surface" aria-label="Close Menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html">Home</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="works.html">Works</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="about.html">About</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html#contact">Contact</a>
+        <a class="px-8 py-4 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-colors duration-300" href="https://wa.me/918587874104" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow">
+        <!-- Hero Section -->
+        <section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-12 pb-section-gap">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-7 flex flex-col items-start gap-8 z-10">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase tracking-widest px-4 py-2 border border-muted-silver/20 rounded-sm">Shopify Dev &amp; Web Architect</span>
+                    <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface max-w-4xl leading-tight">
+                        Shaping <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric-neon to-plasma-blue">E-Commerce</span> structures.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        I'm a multi-disciplinary developer and web designer specializing in high-performance Shopify storefronts, theme development, custom app middleware, and responsive web platforms.
+                    </p>
+                </div>
+                <div class="lg:col-span-5 relative mt-16 lg:mt-0">
+                    <div class="relative w-full aspect-[4/5] glass-panel rounded-lg overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-electric-neon/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"></div>
+                        <img alt="Portrait of Ayush" class="w-full h-full object-cover filter contrast-110 group-hover:contrast-125 transition-all duration-700" src="ayush-portrait.png"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Skills Bento Grid -->
+        <section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative border-t border-muted-silver/20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Experience Timeline -->
+                <div class="lg:col-span-7 flex flex-col gap-12">
+                    <div>
+                        <h2 class="font-headline-xl text-headline-xl text-on-surface mb-2">Trajectory</h2>
+                        <p class="font-label-mono text-label-mono text-muted-silver">E-Commerce &amp; Web Development</p>
+                    </div>
+                    <div class="flex flex-col gap-6 relative before:absolute before:inset-y-0 before:left-2 before:w-px before:bg-muted-silver/20">
+                        <!-- Timeline Item 1 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-electric-neon group-hover:bg-electric-neon transition-colors duration-300 shadow-[0_0_10px_rgba(0,255,65,0.5)]"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">WebFilaments (Full Time)</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">Oct 2025 — Present</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Web Developer &amp; Shopify Designer</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Creating custom Shopify storefronts, developing theme sections with Liquid/JS, and optimizing platform performance.</p>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">WebFilaments (Internship)</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">Apr 2025 — Oct 2025</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Web Developer &amp; Shopify Designer</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Assisted in frontend layouts, customizable theme sections, and responsive web interface integrations.</p>
+                        </div>
+                        <!-- Timeline Item 3 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">Baba Shyam Advertisement</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">Mar 2025 — Apr 2025</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Graphic Designer</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Designed offline visual assets, advertising print components, and customer brand manuals.</p>
+                        </div>
+                        <!-- Timeline Item 4 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">G MART</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">Feb 2025 — Mar 2025</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Graphic Designer</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Created visual packaging layouts, print advertising campaigns, and retail promotional graphics.</p>
+                        </div>
+                        <!-- Timeline Item 5 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">Freelancing</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">2023 — 2025</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Outbound Marketing Consultant</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Crafted client lead acquisition collateral, outreach email designs, and visual marketing maps.</p>
+                        </div>
+                        <!-- Timeline Item 6 -->
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-2 mb-1">
+                                <h3 class="font-headline-md text-lg text-on-surface group-hover:text-electric-neon transition-colors duration-300">INTERPREX</h3>
+                                <span class="font-label-mono text-xs text-muted-silver">Oct 2023 — Jul 2024</span>
+                            </div>
+                            <p class="font-body-md text-xs text-electric-neon mb-2">Graphic Designer</p>
+                            <p class="font-body-md text-xs text-muted-silver max-w-xl">Curated brand identity design guides, visual banners, and UI layout graphics.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skills Arsenal -->
+                <div class="lg:col-span-5 flex flex-col gap-12 mt-16 lg:mt-0">
+                    <div>
+                        <h2 class="font-headline-xl text-headline-xl text-on-surface mb-2">Arsenal</h2>
+                        <p class="font-label-mono text-label-mono text-muted-silver">Languages &amp; Integrines</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">code</span>
+                            <span class="font-label-mono text-xs text-on-surface">React &amp; Next.js</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">shopping_cart</span>
+                            <span class="font-label-mono text-xs text-on-surface">Shopify Theme Dev</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">settings_applications</span>
+                            <span class="font-label-mono text-xs text-on-surface">Shopify App Dev</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">animation</span>
+                            <span class="font-label-mono text-xs text-on-surface">GSAP &amp; Three.js</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">html</span>
+                            <span class="font-label-mono text-xs text-on-surface">HTML / CSS / JS</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">brush</span>
+                            <span class="font-label-mono text-xs text-on-surface">Adobe Photoshop</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">draw</span>
+                            <span class="font-label-mono text-xs text-on-surface">Adobe Illustrator</span>
+                        </div>
+                        <div class="glass-panel p-4 flex flex-col justify-center items-center text-center gap-2 hover:border-electric-neon transition-colors duration-300 group">
+                            <span class="material-symbols-outlined text-3xl text-muted-silver group-hover:text-electric-neon transition-colors">view_in_ar</span>
+                            <span class="font-label-mono text-xs text-on-surface">Blender 3D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Graphic Design Background Mention -->
+            <div class="mt-12 p-6 bg-graphite-surface border border-muted-silver/20 rounded flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-left max-w-2xl">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase tracking-widest mb-1 block">Multidisciplinary Roots</span>
+                    <h3 class="font-headline-md text-xl text-on-surface mb-2">Graphic Design Background</h3>
+                    <p class="font-body-md text-sm text-muted-silver">My developer skillset is grounded in traditional graphic design principles. This background enables me to implement layouts with visual balance, tight typography rhythm, and brand-first storytelling. You can view all my graphic design layouts, brand mockups, and illustrations on my Behance profile.</p>
+                </div>
+                <a href="https://www.behance.net/ayushchaurasia3" target="_blank" class="inline-flex items-center gap-2 px-4 py-3 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-all duration-300 shrink-0 text-xs">
+                    View My Behance <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                </a>
+            </div>
+
+            <!-- Education & Languages Section -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12 pt-12 border-t border-muted-silver/20">
+                <!-- Education (Timeline-style) -->
+                <div class="md:col-span-7">
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-6 uppercase">Education</h3>
+                    <div class="flex flex-col gap-6 relative before:absolute before:inset-y-0 before:left-2 before:w-px before:bg-muted-silver/20">
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-electric-neon group-hover:bg-electric-neon transition-colors duration-300"></div>
+                            <h4 class="font-headline-md text-base text-on-surface">Delhi University (DU)</h4>
+                            <p class="font-body-md text-xs text-electric-neon mb-1">Undergraduate (2022 — 2025)</p>
+                        </div>
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <h4 class="font-headline-md text-base text-on-surface">Diploma in Information Technology (DIT)</h4>
+                            <p class="font-body-md text-xs text-electric-neon mb-1">Professional IT Diploma (Focus on design and computer knowledge)</p>
+                        </div>
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <h4 class="font-headline-md text-base text-on-surface">CBSE Board — Information Technology (IT)</h4>
+                            <p class="font-body-md text-xs text-electric-neon mb-1">2020 — 2022</p>
+                        </div>
+                        <div class="relative pl-12 group">
+                            <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-deep-obsidian border-2 border-muted-silver group-hover:border-electric-neon transition-colors duration-300"></div>
+                            <h4 class="font-headline-md text-base text-on-surface">CBSE Board</h4>
+                            <p class="font-body-md text-xs text-electric-neon mb-1">10th Passed &amp; 12th Passed (2020 — 2022)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Languages and Skills list -->
+                <div class="md:col-span-5 flex flex-col gap-8">
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase">Languages</h3>
+                        <ul class="space-y-3 font-label-mono text-sm">
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-electric-neon"></span> Hindi (Fluent)</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-electric-neon"></span> English (Fluent)</li>
+                            <li class="flex items-center gap-2 text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-electric-neon"></span> Indian Sign Language (Intermediate)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-4 uppercase">Key Strengths</h3>
+                        <ul class="space-y-2 font-body-md text-xs text-muted-silver">
+                            <li>• Project Management &amp; Client Communication</li>
+                            <li>• Teamwork &amp; Cross-functional Collaboration</li>
+                            <li>• Time Management &amp; Tight Deadline Adherence</li>
+                            <li>• Critical Thinking &amp; Creative Problem-Solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="w-full bg-graphite-surface py-section-gap border-y border-muted-silver/20 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-electric-neon/5 to-transparent pointer-events-none"></div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center z-10 relative">
+                <span class="material-symbols-outlined text-electric-neon text-6xl mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                <h2 class="font-headline-xl text-headline-xl text-on-surface max-w-3xl mb-8">
+                    Design is visual logic. Coding is structural execution. Both must align to build conversions.
+                </h2>
+                <p class="font-body-lg text-body-lg text-muted-silver max-w-2xl mb-12">
+                    My approach is grounded in high contrast, fast load times, and structured typography. A site shouldn't just look beautiful — it needs to load in milliseconds and guide visitors seamlessly to checkout.
+                </p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-1 border border-muted-silver/30 text-label-mono font-label-mono text-on-surface-variant uppercase">Minimalism</span>
+                    <span class="px-4 py-1 border border-muted-silver/30 text-label-mono font-label-mono text-on-surface-variant uppercase">E-Commerce</span>
+                    <span class="px-4 py-1 border border-muted-silver/30 text-label-mono font-label-mono text-on-surface-variant uppercase">Performance</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+            <div class="glass-panel p-12 md:p-24 rounded-xl flex flex-col items-center text-center relative overflow-hidden">
+                <div class="absolute -inset-1 bg-gradient-to-r from-electric-neon via-plasma-blue to-electric-neon opacity-20 blur-2xl"></div>
+                <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-6 relative z-10">
+                    Ready to build?
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl relative z-10">
+                    Let's discuss your next project, custom Shopify requirements, or frontend designs.
+                </p>
+                <a class="inline-flex items-center justify-center px-8 py-4 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-all duration-300 hover:scale-105 relative z-10" href="index.html#contact">
+                    Start a Conversation
+                    <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-deep-obsidian full-width py-12 border-t border-muted-silver/20 flat no shadows mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4">
+                <a class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter" href="index.html">Ayush.</a>
+                <p class="font-body-md text-body-md text-muted-silver">© 2026 Ayush Chaurasia. All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-label-mono text-label-mono">
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://www.behance.net/ayushchaurasia3" target="_blank">Behance</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://github.com" target="_blank">GitHub</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://wa.me/918587874104" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Logic -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Web Design Showcase - Ayush Chaurasia</title>
+    <meta name="description" content="Detailed case studies of high-performance web applications and UI systems designed by Ayush Chaurasia.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "electric-neon": "#00FF41",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary": "#b0c6ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#5f6161",
+                        "on-surface-variant": "#b9ccb2",
+                        "primary-fixed-dim": "#00e639",
+                        "secondary-container": "#568dff",
+                        "on-error-container": "#ffdad6",
+                        "muted-silver": "#888888",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#84967e",
+                        "inverse-primary": "#006e16",
+                        "on-primary-fixed": "#002203",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#72ff70",
+                        "on-secondary-fixed": "#001945",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary": "#002d6f",
+                        "surface-container-highest": "#353534",
+                        "deep-obsidian": "#050505",
+                        "primary-container": "#00ff41",
+                        "graphite-surface": "#141414",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#dcdddd",
+                        "on-primary-container": "#007117",
+                        "on-secondary-container": "#002661",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "plasma-blue": "#0070FF",
+                        "surface-tint": "#00e639",
+                        "on-primary": "#003907",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed-variant": "#00530e",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#f9f9f9",
+                        "primary": "#ebffe2",
+                        "outline-variant": "#3b4b37",
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-xl": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-deep-obsidian text-on-surface font-body-md antialiased selection:bg-electric-neon selection:text-deep-obsidian flex flex-col min-h-screen">
+    
+    <!-- TopNavBar Component -->
+    <header class="bg-deep-obsidian/80 backdrop-blur-md full-width top-0 sticky z-50 border-b border-muted-silver/20 flat no shadows">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter" href="index.html">Ayush.</a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="index.html">Home</a>
+                <a class="font-label-mono text-label-mono text-electric-neon border-b-2 border-electric-neon pb-1 uppercase opacity-80 scale-95 transition-transform" href="works.html">Works</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="about.html">About</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="index.html#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/918587874104" target="_blank" class="hidden md:inline-flex bg-electric-neon text-deep-obsidian font-button text-button px-6 py-3 uppercase tracking-wide hover:opacity-80 scale-95 transition-transform flex items-center gap-2">
+                    WhatsApp <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                </a>
+                <button id="hamburger-btn" class="md:hidden text-on-surface flex items-center justify-center" aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (overlay) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-deep-obsidian/95 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 md:hidden">
+        <button id="close-drawer" class="absolute top-6 right-margin-mobile text-on-surface" aria-label="Close Menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html">Home</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="works.html">Works</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="about.html">About</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html#contact">Contact</a>
+        <a class="px-8 py-4 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-colors duration-300" href="https://wa.me/918587874104" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+        <!-- Header Section -->
+        <section class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+                <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2 tracking-widest block font-medium">Interactive Design</span>
+                <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-4">Web Design Showcase</h1>
+                <p class="font-body-lg text-body-lg text-muted-silver max-w-2xl">A curated collection of high-fidelity digital experiences and web interfaces crafted with precision, motion, and structural focus.</p>
+            </div>
+            <a class="inline-flex items-center gap-2 font-label-mono text-label-mono text-electric-neon hover:text-white transition-colors uppercase border border-electric-neon px-4 py-2" href="works.html">
+                <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Gallery
+            </a>
+        </section>
+
+        <!-- Projects List Section -->
+        <div class="flex flex-col gap-16 md:gap-24">
+            <!-- Project Item 1 (Bookseine) -->
+            <div class="group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/10 shadow-lg hover:shadow-electric-neon/20 transition-all duration-500 cursor-pointer" onclick="window.open('https://bookseine.com/', '_blank')">
+                <div class="aspect-[16/9] w-full overflow-hidden bg-surface-container-low border-b border-muted-silver/10 relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://bookseine.com/" alt="Bookseine Digital library bookstore design mockup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load object-top"/>
+                </div>
+                <div class="p-8 md:p-12 flex flex-col md:flex-row gap-8 justify-between items-start md:items-center">
+                    <div class="max-w-3xl">
+                        <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2 tracking-widest block font-medium">Digital Library</span>
+                        <h3 class="font-headline-md text-3xl text-on-surface mb-4">Bookseine</h3>
+                        <p class="font-body-md text-lg text-muted-silver leading-relaxed">A clean, content-first web interface designed for literary portals and digital book discovery. Emphasizes refined column systems, custom serif typography pairings, and distraction-free layouts that elevate visual content.</p>
+                    </div>
+                    <div class="flex flex-col gap-3 shrink-0">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-xs">Tech Stack</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Vue.js</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Nuxt</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">SCSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Item 2 (Bishty) -->
+            <div class="group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/10 shadow-lg hover:shadow-electric-neon/20 transition-all duration-500 cursor-pointer" onclick="window.open('https://bishty.com/', '_blank')">
+                <div class="aspect-[16/9] w-full overflow-hidden bg-surface-container-low border-b border-muted-silver/10 relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://bishty.com/" alt="Bishty e-commerce interface mockup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load object-top"/>
+                </div>
+                <div class="p-8 md:p-12 flex flex-col md:flex-row gap-8 justify-between items-start md:items-center">
+                    <div class="max-w-3xl">
+                        <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2 tracking-widest block font-medium">E-Commerce Platform</span>
+                        <h3 class="font-headline-md text-3xl text-on-surface mb-4">Bishty</h3>
+                        <p class="font-body-md text-lg text-muted-silver leading-relaxed">A premium, dark-themed luxury e-commerce interface engineered for high-end lifestyle electronics and hardware. Spotlights expansive layout grids, smooth hover reveals, and high-fidelity cart-to-checkout flows.</p>
+                    </div>
+                    <div class="flex flex-col gap-3 shrink-0">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-xs">Tech Stack</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Next.js</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Stripe</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Framer Motion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Item 3 (Elitesthes) -->
+            <div class="group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/10 shadow-lg hover:shadow-electric-neon/20 transition-all duration-500 cursor-pointer" onclick="window.open('https://elitesthes.myshopify.com/', '_blank')">
+                <div class="aspect-[16/9] w-full overflow-hidden bg-surface-container-low border-b border-muted-silver/10 relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://elitesthes.myshopify.com" alt="Elitesthes storefront design mockup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load object-top"/>
+                </div>
+                <div class="p-8 md:p-12 flex flex-col md:flex-row gap-8 justify-between items-start md:items-center">
+                    <div class="max-w-3xl">
+                        <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2 tracking-widest block font-medium">Fashion E-Commerce</span>
+                        <h3 class="font-headline-md text-3xl text-on-surface mb-4">Elitesthes</h3>
+                        <p class="font-body-md text-lg text-muted-silver leading-relaxed">A luxury custom Shopify storefront tailored for modern apparel and designer collections. Featuring dynamic product filters, bespoke image-rich galleries, and micro-interactions optimizing search-to-checkout flows.</p>
+                    </div>
+                    <div class="flex flex-col gap-3 shrink-0">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-xs">Tech Stack</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Shopify Liquid</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Javascript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Item 4 (Nextech Club) -->
+            <div class="group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/10 shadow-lg hover:shadow-electric-neon/20 transition-all duration-500 cursor-pointer" onclick="window.open('https://www.nextechclub.com/', '_blank')">
+                <div class="aspect-[16/9] w-full overflow-hidden bg-surface-container-low border-b border-muted-silver/10 relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://www.nextechclub.com/" alt="Nextech Club landing page mockup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load object-top"/>
+                </div>
+                <div class="p-8 md:p-12 flex flex-col md:flex-row gap-8 justify-between items-start md:items-center">
+                    <div class="max-w-3xl">
+                        <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2 tracking-widest block font-medium">Community Platform</span>
+                        <h3 class="font-headline-md text-3xl text-on-surface mb-4">Nextech Club</h3>
+                        <p class="font-body-md text-lg text-muted-silver leading-relaxed">A futuristic tech community platform utilizing high-contrast accents, interactive cards, and high-impact layouts. Built to serve as a high-engagement hub for developers and tech enthusiasts to organize events and connect.</p>
+                    </div>
+                    <div class="flex flex-col gap-3 shrink-0">
+                        <span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-xs">Tech Stack</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">React</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-surface-container-high border border-muted-silver/10 rounded font-label-mono text-xs text-on-surface">Three.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="bg-deep-obsidian full-width py-12 border-t border-muted-silver/20 flat no shadows mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter">Ayush.</span>
+                <p class="font-body-md text-body-md text-muted-silver text-sm">© 2026 Ayush Chaurasia. All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-label-mono text-label-mono">
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://www.behance.net/ayushchaurasia3" target="_blank">Behance</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://github.com" target="_blank">GitHub</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://wa.me/918587874104" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Logic -->
+    <script src="main.js"></script>
+</body>
+</html>

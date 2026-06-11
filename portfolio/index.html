@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayush Chaurasia - Web Developer &amp; Shopify Specialist</title>
+    <meta name="description" content="Portfolio of Ayush Chaurasia, specializing in Web Design, Shopify Development, Shopify App Dev, and custom frontend systems.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "electric-neon": "#00FF41",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary": "#b0c6ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#5f6161",
+                        "on-surface-variant": "#b9ccb2",
+                        "primary-fixed-dim": "#00e639",
+                        "secondary-container": "#568dff",
+                        "on-error-container": "#ffdad6",
+                        "muted-silver": "#888888",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#84967e",
+                        "inverse-primary": "#006e16",
+                        "on-primary-fixed": "#002203",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#72ff70",
+                        "on-secondary-fixed": "#001945",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary": "#002d6f",
+                        "surface-container-highest": "#353534",
+                        "deep-obsidian": "#050505",
+                        "primary-container": "#00ff41",
+                        "graphite-surface": "#141414",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#dcdddd",
+                        "on-primary-container": "#007117",
+                        "on-secondary-container": "#002661",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "plasma-blue": "#0070FF",
+                        "surface-tint": "#00e639",
+                        "on-primary": "#003907",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed-variant": "#00530e",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#f9f9f9",
+                        "primary": "#ebffe2",
+                        "outline-variant": "#3b4b37",
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-xl": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+        }
+        .toast {
+            visibility: hidden;
+            min-width: 280px;
+            background-color: #141414;
+            color: #e5e2e1;
+            text-align: center;
+            border: 1px solid #00FF41;
+            padding: 16px;
+            position: fixed;
+            z-index: 100;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+        .toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-surface antialiased min-h-screen flex flex-col selection:bg-electric-neon selection:text-deep-obsidian">
+
+    <!-- TopNavBar Component -->
+    <nav class="bg-deep-obsidian/80 backdrop-blur-md font-label-mono text-label-mono docked full-width top-0 sticky z-50 border-b border-muted-silver/20 flat no shadows flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <a class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter" href="index.html">Ayush.</a>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-electric-neon border-b-2 border-electric-neon pb-1 hover:text-electric-neon transition-all duration-300" href="index.html">Home</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon transition-all duration-300" href="works.html">Works</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon transition-all duration-300" href="about.html">About</a>
+            <a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300 hover:text-electric-neon transition-all duration-300" href="#contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="https://wa.me/918587874104" target="_blank" class="hidden md:inline-flex bg-electric-neon text-deep-obsidian font-button text-button px-6 py-3 uppercase tracking-wide hover:opacity-80 scale-95 transition-transform flex items-center gap-2">
+                WhatsApp <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+            </a>
+            <button id="hamburger-btn" class="md:hidden text-on-surface flex items-center justify-center" aria-label="Toggle Menu">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (overlay) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-deep-obsidian/95 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 md:hidden">
+        <button id="close-drawer" class="absolute top-6 right-margin-mobile text-on-surface" aria-label="Close Menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html">Home</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="works.html">Works</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="about.html">About</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="#contact">Contact</a>
+        <a class="px-8 py-4 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-colors duration-300" href="https://wa.me/918587874104" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <!-- Hero Section -->
+        <section class="pt-12 pb-12 flex flex-col justify-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-7 flex flex-col items-start">
+                    <p class="font-label-mono text-label-mono text-electric-neon mb-4 uppercase tracking-widest border border-electric-neon inline-block px-4 py-2">Shopify Developer &amp; Web Architect</p>
+                    <h1 class="font-display-lg-mobile md:font-headline-xl text-display-lg-mobile md:text-headline-xl text-on-surface mb-6 leading-tight">Elevating E-Commerce with High-Performance Code.</h1>
+                    <p class="font-body-lg text-body-lg text-muted-silver max-w-xl mb-8">I specialize in bespoke Shopify theme development, custom Shopify app middleware, and responsive frontend design to turn digital visions into high-converting realities.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <a class="bg-electric-neon text-deep-obsidian font-button text-button px-6 py-4 uppercase tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2" href="works.html">
+                            View My Projects <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a class="border-2 border-on-surface text-on-surface font-button text-button px-6 py-4 uppercase tracking-wide hover:border-electric-neon hover:text-electric-neon transition-colors flex justify-center items-center" href="#contact">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative mt-8 lg:mt-0">
+                    <div class="relative w-full aspect-square max-w-[380px] mx-auto bg-graphite-surface rounded-lg overflow-hidden border border-muted-silver/20 group shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-br from-electric-neon/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay"></div>
+                        <img alt="Portrait of Ayush" class="w-full h-full object-cover filter contrast-110 group-hover:contrast-125 transition-all duration-700" src="ayush-portrait.png"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="py-section-gap border-t border-muted-silver/20" id="services">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+                <h2 class="font-headline-xl text-headline-xl">Expertise</h2>
+                <p class="font-label-mono text-label-mono text-muted-silver uppercase">What I Do</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="bg-graphite-surface p-8 border border-muted-silver/20 hover:border-electric-neon transition-colors group flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-electric-neon text-4xl mb-6">shopping_bag</span>
+                        <h3 class="font-headline-md text-headline-md mb-4 group-hover:text-electric-neon transition-colors">Shopify Dev</h3>
+                        <p class="font-body-md text-body-md text-muted-silver">Pixel-perfect custom storefronts, custom sections, theme refactoring, page speed optimization, and Liquid coding.</p>
+                    </div>
+                    <a href="works.html?filter=shopify" class="inline-flex items-center gap-1 font-label-mono text-xs text-electric-neon hover:text-white transition-colors uppercase mt-6">
+                        View Themes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="bg-graphite-surface p-8 border border-muted-silver/20 hover:border-electric-neon transition-colors group flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-electric-neon text-4xl mb-6">integration_instructions</span>
+                        <h3 class="font-headline-md text-headline-md mb-4 group-hover:text-electric-neon transition-colors">Shopify App Dev</h3>
+                        <p class="font-body-md text-body-md text-muted-silver">Custom middleware integrations, subscription billing integrations, metafield handlers, and API-driven automation.</p>
+                    </div>
+                    <a href="works.html?filter=app" class="inline-flex items-center gap-1 font-label-mono text-xs text-electric-neon hover:text-white transition-colors uppercase mt-6">
+                        View App Works <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="bg-graphite-surface p-8 border border-muted-silver/20 hover:border-electric-neon transition-colors group flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-electric-neon text-4xl mb-6">code</span>
+                        <h3 class="font-headline-md text-headline-md mb-4 group-hover:text-electric-neon transition-colors">Web Design</h3>
+                        <p class="font-body-md text-body-md text-muted-silver">Clean, functional UI/UX design and frontend developments utilizing React, Vue, Next.js, and modern CSS systems.</p>
+                    </div>
+                    <a href="web-design.html" class="inline-flex items-center gap-1 font-label-mono text-xs text-electric-neon hover:text-white transition-colors uppercase mt-6">
+                        View Case Studies <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Graphic Design & Social Ads Mention Banner -->
+            <div class="mt-8 p-6 bg-graphite-surface/40 border border-muted-silver/10 rounded flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="text-left max-w-2xl">
+                    <h4 class="font-headline-md text-lg text-on-surface uppercase mb-1">Graphic Design &amp; Product Ad Reels</h4>
+                    <p class="font-body-md text-sm text-muted-silver">Looking for my graphic design, vector brand layouts, or visual ads and product reels? Explore my work on Behance and our custom visual showcase.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 items-center shrink-0">
+                    <a href="https://www.behance.net/ayushchaurasia3" target="_blank" class="inline-flex items-center gap-1 font-label-mono text-xs text-electric-neon hover:text-white transition-colors uppercase">
+                        View Behance <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                    </a>
+                    <span class="text-muted-silver/20 hidden md:inline">|</span>
+                    <a href="social-ads.html" class="inline-flex items-center gap-1 font-label-mono text-xs text-electric-neon hover:text-white transition-colors uppercase">
+                        View Video Reels &amp; Ads <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me Section -->
+        <section class="py-section-gap border-t border-muted-silver/20" id="why-choose-me">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+                <h2 class="font-headline-xl text-headline-xl">Why Choose Me</h2>
+                <p class="font-label-mono text-label-mono text-muted-silver uppercase">Value Proposition</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Point 1 -->
+                <div class="bg-graphite-surface p-6 border border-muted-silver/10 hover:border-electric-neon transition-colors rounded">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-4">bolt</span>
+                    <h4 class="font-headline-md text-base text-on-surface uppercase mb-2">Performance First</h4>
+                    <p class="font-body-md text-xs text-muted-silver">Page speed is conversion. I write lightweight Liquid and optimized JS, helping brands boost their search rankings and shopper retention.</p>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-graphite-surface p-6 border border-muted-silver/10 hover:border-electric-neon transition-colors rounded">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-4">palette</span>
+                    <h4 class="font-headline-md text-base text-on-surface uppercase mb-2">Design Meets Code</h4>
+                    <p class="font-body-md text-xs text-muted-silver">Coming from a solid graphic design background, I bridge the gap between creative visual logic and clean frontend code architecture.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-graphite-surface p-6 border border-muted-silver/10 hover:border-electric-neon transition-colors rounded">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-4">terminal</span>
+                    <h4 class="font-headline-md text-base text-on-surface uppercase mb-2">Shopify Specialist</h4>
+                    <p class="font-body-md text-xs text-muted-silver">Whether building private apps, creating dynamic theme sections, or debugging integrations, I handle Shopify's APIs from the inside out.</p>
+                </div>
+                <!-- Point 4 -->
+                <div class="bg-graphite-surface p-6 border border-muted-silver/10 hover:border-electric-neon transition-colors rounded">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-4">chat</span>
+                    <h4 class="font-headline-md text-base text-on-surface uppercase mb-2">Direct Collaboration</h4>
+                    <p class="font-body-md text-xs text-muted-silver">You work directly with me. I maintain clear, reliable communication in English, Hindi, and Indian Sign Language (ISL) to keep projects aligned.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects teaser -->
+        <section class="py-section-gap border-t border-muted-silver/20" id="works">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+                <h2 class="font-headline-xl text-headline-xl">Selected Storefronts</h2>
+                <a class="font-label-mono text-label-mono text-electric-neon hover:text-white transition-colors flex items-center gap-1 uppercase" href="works.html">View All Projects <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- Project 1 (Luna Xir) -->
+                <div class="group relative overflow-hidden bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://lunaxir.com/', '_blank')">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                        <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                        <!-- Live website image populated by JS -->
+                        <img data-live-src="https://lunaxir.com/" alt="Luna Xir Premium Store" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                    </div>
+                    <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 border-2 border-transparent group-hover:border-electric-neon">
+                        <p class="font-label-mono text-label-mono text-electric-neon mb-2">Shopify Development</p>
+                        <h3 class="font-headline-md text-headline-md">Luna Xir</h3>
+                    </div>
+                </div>
+                <!-- Project 2 (Bishty) -->
+                <div class="group relative overflow-hidden bg-graphite-surface border border-muted-silver/20 cursor-pointer mt-0 md:mt-16" onclick="window.open('https://bishty.com/', '_blank')">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                        <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                        <img data-live-src="https://bishty.com/" alt="Bishty Luxury E-Commerce" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                    </div>
+                    <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 border-2 border-transparent group-hover:border-electric-neon">
+                        <p class="font-label-mono text-label-mono text-electric-neon mb-2">Shopify Development</p>
+                        <h3 class="font-headline-md text-headline-md">Bishty Store</h3>
+                    </div>
+                </div>
+                <!-- Project 3 (Nextech Club) -->
+                <div class="group relative overflow-hidden bg-graphite-surface border border-muted-silver/20 cursor-pointer md:col-span-2" onclick="window.open('https://www.nextechclub.com/', '_blank')">
+                    <div class="aspect-w-21 aspect-h-9 overflow-hidden max-h-[500px] aspect-[21/9] bg-surface-container-low relative">
+                        <div class="absolute inset-0 flex items-center justify-center font-label-mono text-xs text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                        <img data-live-src="https://www.nextechclub.com/" alt="Nextech Club Community Website" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                    </div>
+                    <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12 border-2 border-transparent group-hover:border-electric-neon">
+                        <p class="font-label-mono text-label-mono text-electric-neon mb-2">Web Design • Community</p>
+                        <h3 class="font-display-lg-mobile md:font-headline-xl text-display-lg-mobile md:text-headline-xl">Nextech Club</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-section-gap border-t border-muted-silver/20 overflow-hidden relative" id="testimonials">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+                <h2 class="font-headline-xl text-headline-xl">Client Reviews</h2>
+                <div class="flex gap-4">
+                    <button id="prev-testi" class="w-12 h-12 border border-muted-silver/40 flex justify-center items-center hover:border-electric-neon hover:text-electric-neon transition-colors" aria-label="Previous Testimonial">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button id="next-testi" class="w-12 h-12 border border-muted-silver/40 flex justify-center items-center hover:border-electric-neon hover:text-electric-neon transition-colors" aria-label="Next Testimonial">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="relative w-full max-w-4xl mx-auto min-h-[300px]">
+                <!-- Slides Container -->
+                <div id="testimonial-slides" class="relative overflow-hidden w-full h-full flex flex-col md:flex-row">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide w-full shrink-0 transition-opacity duration-500 opacity-100 flex flex-col items-center justify-center text-center">
+                        <span class="material-symbols-outlined text-electric-neon text-6xl mb-6 opacity-50">format_quote</span>
+                        <p class="font-headline-md text-headline-md text-on-surface mb-8 leading-relaxed max-w-3xl">"Ayush brings clarity to complex shopify mechanics. His coding was extremely fast, and our storefront page speed score went from 30 to 85. Our conversion metrics rose immediately."</p>
+                        <div class="flex items-center gap-4 text-left font-sans">
+                            <div class="w-12 h-12 rounded-full bg-graphite-surface border border-electric-neon flex items-center justify-center font-bold text-electric-neon font-label-mono">MB</div>
+                            <div>
+                                <p class="font-body-md text-body-md font-bold">Milan Bakker</p>
+                                <p class="font-label-mono text-label-mono text-muted-silver">Founder, Drifted Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide w-full shrink-0 transition-opacity duration-500 opacity-0 absolute top-0 left-0 hidden flex flex-col items-center justify-center text-center">
+                        <span class="material-symbols-outlined text-electric-neon text-6xl mb-6 opacity-50">format_quote</span>
+                        <p class="font-headline-md text-headline-md text-on-surface mb-8 leading-relaxed max-w-3xl">"Stunning attention to details on our custom Shopify sections. Ayush built custom middleware integrations for subscription options that work seamlessly."</p>
+                        <div class="flex items-center gap-4 text-left font-sans">
+                            <div class="w-12 h-12 rounded-full bg-graphite-surface border border-electric-neon flex items-center justify-center font-bold text-electric-neon font-label-mono">AS</div>
+                            <div>
+                                <p class="font-body-md text-body-md font-bold">Aarav Sharma</p>
+                                <p class="font-label-mono text-label-mono text-muted-silver">E-Commerce Merchant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Contact Section -->
+        <section class="py-section-gap border-t border-muted-silver/20 text-center" id="contact">
+            <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Start a Project.</h2>
+            <p class="font-body-lg text-body-lg text-muted-silver max-w-2xl mx-auto mb-12">Available for contract roles, bespoke themes, or custom integrations.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-16">
+                <a href="mailto:chaurasiaayush67@gmail.com" class="bg-graphite-surface border border-muted-silver/20 hover:border-electric-neon transition-colors p-6 rounded flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl">mail</span>
+                    <span class="font-label-mono text-sm uppercase text-on-surface">Email Me</span>
+                    <span class="font-body-md text-xs text-muted-silver">chaurasiaayush67@gmail.com</span>
+                </a>
+                <a href="https://wa.me/918587874104" target="_blank" class="bg-graphite-surface border border-muted-silver/20 hover:border-electric-neon transition-colors p-6 rounded flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl">chat</span>
+                    <span class="font-label-mono text-sm uppercase text-on-surface">WhatsApp Chat</span>
+                    <span class="font-body-md text-xs text-muted-silver">+91 8587874104</span>
+                </a>
+                <a href="https://www.behance.net/ayushchaurasia3" target="_blank" class="bg-graphite-surface border border-muted-silver/20 hover:border-electric-neon transition-colors p-6 rounded flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-electric-neon text-3xl">brush</span>
+                    <span class="font-label-mono text-sm uppercase text-on-surface">Graphic Design</span>
+                    <span class="font-body-md text-xs text-muted-silver">View Behance Portfolio</span>
+                </a>
+            </div>
+
+            <form id="contact-form" class="max-w-xl mx-auto flex flex-col gap-6 text-left bg-graphite-surface p-8 border border-muted-silver/20 rounded relative z-10">
+                <div>
+                    <label class="block font-label-mono text-label-mono text-muted-silver mb-2 uppercase" for="form-name">Your Name</label>
+                    <input id="form-name" type="text" required class="w-full bg-deep-obsidian border-b border-muted-silver/40 focus:border-electric-neon focus:ring-0 text-on-surface py-3 px-4 outline-none transition-colors" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block font-label-mono text-label-mono text-muted-silver mb-2 uppercase" for="form-email">Your Email</label>
+                    <input id="form-email" type="email" required class="w-full bg-deep-obsidian border-b border-muted-silver/40 focus:border-electric-neon focus:ring-0 text-on-surface py-3 px-4 outline-none transition-colors" placeholder="john@example.com">
+                </div>
+                <div>
+                    <label class="block font-label-mono text-label-mono text-muted-silver mb-2 uppercase" for="form-message">Your Message</label>
+                    <textarea id="form-message" required rows="4" class="w-full bg-deep-obsidian border-b border-muted-silver/40 focus:border-electric-neon focus:ring-0 text-on-surface py-3 px-4 outline-none transition-colors resize-none" placeholder="Let's build something extraordinary..."></textarea>
+                </div>
+                <button type="submit" class="bg-electric-neon text-deep-obsidian font-button text-button py-4 uppercase tracking-wide hover:opacity-90 transition-opacity flex justify-center items-center gap-2">
+                    Send Message <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="bg-deep-obsidian text-electric-neon font-body-md text-body-md font-label-mono text-label-mono full-width py-16 border-t border-muted-silver/20 flat no shadows mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter">Ayush.</span>
+                <p class="text-muted-silver text-sm">© 2026 Ayush Chaurasia. All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-label-mono text-label-mono">
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://www.behance.net/ayushchaurasia3" target="_blank">Behance</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://github.com" target="_blank">GitHub</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://wa.me/918587874104" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Feedback Toast -->
+    <div id="form-toast" class="toast">
+        <span class="material-symbols-outlined align-middle mr-2 text-electric-neon">check_circle</span>
+        Message sent successfully!
+    </div>
+
+    <!-- Script Logic -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Works Gallery - Ayush Chaurasia</title>
+    <meta name="description" content="Web development, Shopify theme builds, and custom Shopify app developments by Ayush Chaurasia.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "electric-neon": "#00FF41",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "secondary": "#b0c6ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-container": "#5f6161",
+                        "on-surface-variant": "#b9ccb2",
+                        "primary-fixed-dim": "#00e639",
+                        "secondary-container": "#568dff",
+                        "on-error-container": "#ffdad6",
+                        "muted-silver": "#888888",
+                        "surface-container-low": "#1c1b1b",
+                        "outline": "#84967e",
+                        "inverse-primary": "#006e16",
+                        "on-primary-fixed": "#002203",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#72ff70",
+                        "on-secondary-fixed": "#001945",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary": "#002d6f",
+                        "surface-container-highest": "#353534",
+                        "deep-obsidian": "#050505",
+                        "primary-container": "#00ff41",
+                        "graphite-surface": "#141414",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-container": "#dcdddd",
+                        "on-primary-container": "#007117",
+                        "on-secondary-container": "#002661",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "plasma-blue": "#0070FF",
+                        "surface-tint": "#00e639",
+                        "on-primary": "#003907",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed-variant": "#00530e",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#3a3939",
+                        "tertiary": "#f9f9f9",
+                        "primary": "#ebffe2",
+                        "outline-variant": "#3b4b37",
+                        "surface-variant": "#353534",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "48px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "button": ["Inter"],
+                        "display-lg-mobile": ["Sora"],
+                        "headline-xl": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .masonry-grid {
+            columns: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                columns: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                columns: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-surface font-body-md antialiased selection:bg-electric-neon selection:text-deep-obsidian flex flex-col min-h-screen">
+    
+    <!-- TopNavBar Component -->
+    <header class="bg-deep-obsidian/80 backdrop-blur-md full-width top-0 sticky z-50 border-b border-muted-silver/20 flat no shadows">
+        <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <a class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter" href="index.html">Ayush.</a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="index.html">Home</a>
+                <a class="font-label-mono text-label-mono text-electric-neon border-b-2 border-electric-neon pb-1 uppercase opacity-80 scale-95 transition-transform" href="works.html">Works</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="about.html">About</a>
+                <a class="font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors duration-300 uppercase" href="index.html#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/918587874104" target="_blank" class="hidden md:inline-flex bg-electric-neon text-deep-obsidian font-button text-button px-6 py-3 uppercase tracking-wide hover:opacity-80 scale-95 transition-transform flex items-center gap-2">
+                    WhatsApp <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                </a>
+                <button id="hamburger-btn" class="md:hidden text-on-surface flex items-center justify-center" aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (overlay) -->
+    <div id="mobile-drawer" class="fixed inset-0 bg-deep-obsidian/95 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 md:hidden">
+        <button id="close-drawer" class="absolute top-6 right-margin-mobile text-on-surface" aria-label="Close Menu">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html">Home</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="works.html">Works</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="about.html">About</a>
+        <a class="font-label-mono text-xl text-on-surface hover:text-electric-neon uppercase" href="index.html#contact">Contact</a>
+        <a class="px-8 py-4 bg-electric-neon text-deep-obsidian font-button text-button uppercase tracking-wider hover:bg-white transition-colors duration-300" href="https://wa.me/918587874104" target="_blank">WhatsApp Chat</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+        <!-- Header Section -->
+        <section class="mb-16 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+            <div>
+                <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-4">Works Gallery</h1>
+                <p class="font-body-lg text-body-lg text-muted-silver max-w-2xl mb-6">Explore my custom Shopify storefronts, theme developments, custom apps, and client web projects.</p>
+            </div>
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-4" id="gallery-filters">
+                <button data-filter="all" class="filter-btn px-4 py-2 border border-electric-neon text-electric-neon font-label-mono text-label-mono uppercase transition-colors duration-300 rounded">All</button>
+                <button data-filter="shopify" class="filter-btn px-4 py-2 border border-muted-silver/40 text-muted-silver font-label-mono text-label-mono uppercase hover:border-electric-neon hover:text-electric-neon transition-colors duration-300 rounded font-medium">Shopify Dev</button>
+                <button data-filter="app" class="filter-btn px-4 py-2 border border-muted-silver/40 text-muted-silver font-label-mono text-label-mono uppercase hover:border-electric-neon hover:text-electric-neon transition-colors duration-300 rounded font-medium">Shopify App Dev</button>
+                <button data-filter="web" class="filter-btn px-4 py-2 border border-muted-silver/40 text-muted-silver font-label-mono text-label-mono uppercase hover:border-electric-neon hover:text-electric-neon transition-colors duration-300 rounded font-medium">Web Design</button>
+            </div>
+        </section>
+
+        <!-- Showcases Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Graphic Design Showcase -->
+            <div class="p-6 bg-graphite-surface border border-muted-silver/10 hover:border-electric-neon/40 transition-colors rounded flex flex-col justify-between gap-4">
+                <div>
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-2">brush</span>
+                    <h4 class="font-headline-md text-lg text-on-surface uppercase mb-1">Graphic Design &amp; Brand</h4>
+                    <p class="font-body-md text-sm text-muted-silver">Layouts, print vector designs, and illustration branding hosted on Behance.</p>
+                </div>
+                <a href="https://www.behance.net/ayushchaurasia3" target="_blank" class="inline-flex items-center gap-1 font-label-mono text-label-mono text-electric-neon hover:text-white transition-colors uppercase mt-2">
+                    View Behance <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                </a>
+            </div>
+            
+            <!-- Web Case Studies -->
+            <div class="p-6 bg-graphite-surface border border-muted-silver/10 hover:border-electric-neon/40 transition-colors rounded flex flex-col justify-between gap-4">
+                <div>
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-2">menu_book</span>
+                    <h4 class="font-headline-md text-lg text-on-surface uppercase mb-1">Web Case Studies</h4>
+                    <p class="font-body-md text-sm text-muted-silver">Technical analysis and visual layout breakdowns of my top web projects.</p>
+                </div>
+                <a href="web-design.html" class="inline-flex items-center gap-1 font-label-mono text-label-mono text-electric-neon hover:text-white transition-colors uppercase mt-2">
+                    View Case Studies <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Social Ads & Video Reels -->
+            <div class="p-6 bg-graphite-surface border border-muted-silver/10 hover:border-electric-neon/40 transition-colors rounded flex flex-col justify-between gap-4">
+                <div>
+                    <span class="material-symbols-outlined text-electric-neon text-3xl mb-2">movie</span>
+                    <h4 class="font-headline-md text-lg text-on-surface uppercase mb-1">Visual Ads &amp; Reels</h4>
+                    <p class="font-body-md text-sm text-muted-silver">Cinematic video edits, before/after compositing sliders, and product ad creatives.</p>
+                </div>
+                <a href="social-ads.html" class="inline-flex items-center gap-1 font-label-mono text-label-mono text-electric-neon hover:text-white transition-colors uppercase mt-2">
+                    View Reels &amp; Ads <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <section class="masonry-grid" id="works-grid">
+            <!-- Project 1 (Bookseine) -->
+            <div data-category="web" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://bookseine.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://bookseine.com/" alt="Bookseine Digital bookstore" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Web Design</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Bookseine</h3>
+                </div>
+            </div>
+
+            <!-- Project 2 (Bishty) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://bishty.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://bishty.com/" alt="Bishty Store" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Bishty Store</h3>
+                </div>
+            </div>
+
+            <!-- Project 3 (Elitesthes) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://elitesthes.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://elitesthes.myshopify.com" alt="Elitesthes" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Elitesthes</h3>
+                </div>
+            </div>
+
+            <!-- Project 4 (Luna Xir) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://lunaxir.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://lunaxir.com/" alt="Luna Xir" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Luna Xir</h3>
+                </div>
+            </div>
+
+            <!-- Project 5 (Nextech Club) -->
+            <div data-category="web" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://www.nextechclub.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://www.nextechclub.com/" alt="Nextech Club" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Web Design • Community</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Nextech Club</h3>
+                </div>
+            </div>
+
+            <!-- Project 6 (Lumedoo) -->
+            <div data-category="app" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://lumedoo.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://lumedoo.com/" alt="Lumedoo Dashboard" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify App Dev</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Lumedoo</h3>
+                </div>
+            </div>
+
+            <!-- Project 7 (SRJNCV S7) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://srjncv-s7.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://srjncv-s7.myshopify.com/" alt="SRJNCV S7 storefront" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">SRJNCV S7</h3>
+                </div>
+            </div>
+
+            <!-- Project 8 (Gypsi Paws) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://gypsipaws.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://gypsipaws.com/" alt="Gypsi Paws" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Gypsi Paws</h3>
+                </div>
+            </div>
+
+            <!-- Project 9 (Woofly Shoppe) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://wooflyshope.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://wooflyshope.com/" alt="Woofly Shoppe" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Woofly Shoppe</h3>
+                </div>
+            </div>
+
+            <!-- Project 10 (Cosma Queen) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://cosmaqueen.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://cosmaqueen.myshopify.com/" alt="Cosma Queen" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Cosma Queen</h3>
+                </div>
+            </div>
+
+            <!-- Project 11 (CKYEBF YC) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://ckyebf-yc.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://ckyebf-yc.myshopify.com/" alt="CKYEBF YC theme" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">CKYEBF YC</h3>
+                </div>
+            </div>
+
+            <!-- Project 12 (Moonshine & Glitter) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://www.moonshineandglitter.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://www.moonshineandglitter.com/" alt="Moonshine & Glitter" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Moonshine &amp; Glitter</h3>
+                </div>
+            </div>
+
+            <!-- Project 13 (McKenzie Bros) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://mckenziebros.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://mckenziebros.com/" alt="McKenzie Bros" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">McKenzie Bros</h3>
+                </div>
+            </div>
+
+            <!-- Project 14 (Zora Velasco) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://zvelasco.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://zvelasco.com/" alt="Zora Velasco" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Zora Velasco</h3>
+                </div>
+            </div>
+
+            <!-- Project 15 (Genevra) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://genevra.us/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://genevra.us/" alt="Genevra" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Genevra</h3>
+                </div>
+            </div>
+
+            <!-- Project 16 (FCK Midges) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://fckmidges.myshopify.com/?pb=0', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://fckmidges.myshopify.com/?pb=0" alt="FCK Midges" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">FCK Midges</h3>
+                </div>
+            </div>
+
+            <!-- Project 17 (Favlty) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://favlty.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://favlty.com/" alt="Favlty" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Favlty</h3>
+                </div>
+            </div>
+
+            <!-- Project 18 (Doggy World) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://doggyworld.ch/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://doggyworld.ch" alt="Doggy World" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Doggy World</h3>
+                </div>
+            </div>
+
+            <!-- Project 19 (Introuvable Studio) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://introuvable-studio.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://introuvable-studio.com/" alt="Introuvable Studio" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Introuvable Studio</h3>
+                </div>
+            </div>
+
+            <!-- Project 20 (ght9hm-r3.myshopify.com) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://ght9hm-r3.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://ght9hm-r3.myshopify.com/" alt="ght9hm Shopify store" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">GHT9HM Store</h3>
+                </div>
+            </div>
+
+            <!-- Project 21 (neattire-2.myshopify.com) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://neattire-2.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://neattire-2.myshopify.com/" alt="Neattire Shopify store" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Neattire 2</h3>
+                </div>
+            </div>
+
+            <!-- Project 22 (xfbudf-0e.myshopify.com) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://xfbudf-0e.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://xfbudf-0e.myshopify.com/" alt="xfbudf Shopify store" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">XFBUDF Store</h3>
+                </div>
+            </div>
+
+            <!-- Project 23 (Xevrn Works) -->
+            <div data-category="web" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://xevrn-theta-azure-eu29rtf918.vercel.app/works', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://xevrn-theta-azure-eu29rtf918.vercel.app/works" alt="Xevrn Works page" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Web Design</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Xevrn Works</h3>
+                </div>
+            </div>
+
+            <!-- Project 24 (WhatsyChatt Shopify App) -->
+            <div data-category="app" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://apps.shopify.com/whatsychatt?st_source=autocomplete&amp;surface_detail=autocomplete_apps', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://apps.shopify.com/whatsychatt?st_source=autocomplete&amp;surface_detail=autocomplete_apps" alt="WhatsyChatt Shopify App" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify App Dev</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">WhatsyChatt App</h3>
+                </div>
+            </div>
+
+            <!-- Project 25 (Gost Investigations) -->
+            <div data-category="web" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://anupthakur.wixsite.com/gost', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://anupthakur.wixsite.com/gost" alt="Gost Investigations" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Web Design • Wix</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Gost Investigations</h3>
+                </div>
+            </div>
+
+            <!-- Project 26 (Ayush Portfolio) -->
+            <div data-category="web" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://ayushsportfolio.vercel.app/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://ayushsportfolio.vercel.app/" alt="Ayush Portfolio" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Web Design • Next.js</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Ayush Portfolio</h3>
+                </div>
+            </div>
+
+            <!-- Project 27 (Fastgo) -->
+            <div data-category="shopify" class="masonry-item group relative overflow-hidden rounded bg-graphite-surface border border-muted-silver/20 cursor-pointer" onclick="window.open('https://aayush2nd.myshopify.com/', '_blank')">
+                <div class="aspect-w-16 aspect-h-12 overflow-hidden aspect-[4/3] bg-surface-container-low relative">
+                    <div class="absolute inset-0 flex items-center justify-center font-label-mono text-[10px] text-muted-silver animate-pulse load-status">Loading Live Preview...</div>
+                    <img data-live-src="https://aayush2nd.myshopify.com/" alt="Fastgo store" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 opacity-0 img-lazy-load"/>
+                </div>
+                <div class="absolute inset-0 bg-deep-obsidian/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 border-2 border-transparent group-hover:border-electric-neon rounded">
+                    <span class="font-label-mono text-label-mono text-electric-neon uppercase mb-2">Shopify Development</span>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Fastgo</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="bg-deep-obsidian full-width py-12 border-t border-muted-silver/20 flat no shadows mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4">
+                <span class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tighter">Ayush.</span>
+                <p class="font-body-md text-body-md text-muted-silver">© 2026 Ayush Chaurasia. All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-label-mono text-label-mono">
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://www.behance.net/ayushchaurasia3" target="_blank">Behance</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://github.com" target="_blank">GitHub</a>
+                <a class="text-muted-silver hover:text-electric-neon transition-all duration-300 hover:translate-x-1" href="https://wa.me/918587874104" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Logic -->
+    <script src="main.js"></script>
+</body>
+</html>
